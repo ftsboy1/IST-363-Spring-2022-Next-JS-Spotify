@@ -49,10 +49,10 @@ const SingleArtistPage =( {artistData} )=>{
                 alumb
             </Heading>
             <Row>
-            {artistsToAlbums.map((album)=>{
+            {artistsToAlbums.map((album,index)=>{
                 const {title ,slug,featuredImage} = album
                 const {sourceUrl, altText, mediaDetails } = featuredImage.node;
-                    return <Col xs="6" sm="4" md="3">  
+                    return <Col key={index} xs="6" sm="4" md="3">  
                     <Link href={'/albums'}>
                     <a>
                         <Image 
