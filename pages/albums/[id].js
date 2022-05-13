@@ -1,4 +1,4 @@
-const { default: Layout } = require("../../component/Layout")
+import Layout from '../../component/Layout.js';
 import Heading from '../../component/Heading';
 import Image from "next/image"
 import {getAllAlbumSlugs,getSingleAlbumData } from '../../lib/api'

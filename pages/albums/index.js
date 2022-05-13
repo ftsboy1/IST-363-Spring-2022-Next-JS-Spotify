@@ -1,4 +1,4 @@
-import Layout from '../../component/Layout'
+import Layout from '../../component/Layout.js'
 import Row from "../../component/Row"
 import Heading from "../../component/Heading"
 import Link from 'next/link'
