@@ -1,4 +1,4 @@
-import Layout from "../component/layout"
+import Layout from "../component/Layout"
 import Heading from "../component/Heading"
 
 const SupportPage = ( ) =>{
