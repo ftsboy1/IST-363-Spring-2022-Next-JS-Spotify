@@ -1,4 +1,4 @@
-import Layout from "../../component/Layout.js";
+import Layout from "../../component/Layout";
 import Heading from "../../component/Heading"
 import {getTracks} from "../../lib/api"
 import Link from "next/link"

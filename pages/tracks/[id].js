@@ -1,4 +1,4 @@
-import Layout from '../../component/Layout.js';
+import Layout from '../../component/Layout';
 import {getAllTrackPaths, getSingleTrackData} from '../../lib/api'
 
 import Link from "next/link"
