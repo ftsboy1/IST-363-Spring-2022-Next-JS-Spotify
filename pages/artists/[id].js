@@ -4,7 +4,7 @@ import Row from "../../component/Row"
 import Col from "../../component/Col"
 import Link from 'next/link'
 import Paragraph from '../../component/Paragraph'
-import Layout from "../../component/layout";
+import Layout from "../../component/Layout";
 import {getAllArtistSlugs,getSingleArtistData} from "../../lib/api"
 
 

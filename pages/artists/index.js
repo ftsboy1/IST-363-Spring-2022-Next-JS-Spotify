@@ -1,5 +1,5 @@
 
-import Layout from "../../component/layout"
+import Layout from "../../component/Layout"
 import Heading from "../../component/Heading"
 import Row from "../../component/Row"
 import Col from "../../component/Col"
