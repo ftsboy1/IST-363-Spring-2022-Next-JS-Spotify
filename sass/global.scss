@@ -1,0 +1,50 @@
+@use "./vendor";
+
+@use "./abstracts/vars";
+@use './abstracts/mixins';
+
+
+
+
+//typographic reset 
+h1 ,h2 ,h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+    font:inherit;
+}
+* {
+    box-sizing: border-box; 
+}
+html{
+    min-height: 100vh;
+}
+ul,li{
+    list-style: none;
+}
+
+
+body{
+    
+    font-family: vars.$font_primary;
+    color: vars.$SUBlue;
+    min-height:100%;
+    h2{
+        color:wheat;
+        margin:0;
+    }
+    @include mixins.breakpoint(phone){
+        background-color:vars.$SUorange;
+        font-size: 1rem;
+        margin-bottom:.2rem;
+    }
+    @include mixins.breakpoint(tablet){
+        background-color: wheat;
+        ul{font-size:1rem}
+        font-size: 2rem;
+        margin-bottom:1.2rem;
+    }
+    @include mixins.breakpoint(laptop){background-color: red;}
+    @include mixins.breakpoint(desktop){background-color:orange;}
+   
+}
+

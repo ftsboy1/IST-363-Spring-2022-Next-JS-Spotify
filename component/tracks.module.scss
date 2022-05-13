@@ -1,0 +1,16 @@
+.tracks{
+    background-color:white;
+    list-style-type:none;
+    padding:0;  
+    margin: 0;
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    h3{color: darkblue;}
+    .trackItem{
+        padding: 0;
+        margin: 0;
+        padding: 1rem;
+        
+    }
+    
+}

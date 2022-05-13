@@ -1,0 +1,10 @@
+.paragraph{
+    font:arial;
+    font-weight: bold;
+    color: pink;
+    font-size: 2rem;
+    &.intro{
+        color: lightblue;
+        font-size: 1rem;
+    }
+}
