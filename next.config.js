@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-      domains: ['ist-363-spotify.local'],
+      domains: ['ist-363-spotify.local','ist363.xyz'],
     },
   }
