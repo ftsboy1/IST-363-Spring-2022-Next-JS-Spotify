@@ -1,4 +1,4 @@
-import styles from  "./button.module.scss";
+import styles from  "./button.module";
 import classNames from'classnames/bind';
 import Link from 'next/link';
 
