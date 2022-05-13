@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Row from "../../component/Row"
 import Col from "../../component/Col"
 import Link from 'next/link'
+import Paragraph from '../../component/Paragraph'
 import Layout from "../../component/layout";
 import {getAllArtistSlugs,getSingleArtistData} from "../../lib/api"
 
@@ -72,6 +73,13 @@ const SingleArtistPage =( {artistData} )=>{
             </Row>
         </section>
 }
+ <Paragraph >
+     <Link href={`/artists`}>
+     <a>
+         back to artists
+     </a>
+     </Link>
+ </Paragraph>
     </Layout>
 }
 export default SingleArtistPage ;

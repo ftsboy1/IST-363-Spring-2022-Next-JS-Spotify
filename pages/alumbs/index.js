@@ -25,13 +25,13 @@ const AlbumsPage = ({albums})=> {
        
         {albums.map((album,index)=>{
             const {featuredImage, title, slug} = album;
-            const {src, alt , width, height } = featuredImage;
+            const {SourceUrl, altText, mediaDetails } = featuredImage.node;
             return <Col key={index} xs="6" sm="4">
                 <Image
-                src={`/images/${src}`}
-                alt={alt}
-                width={width}
-                height={height}
+                src={SourceUrl}
+                alt={altText}
+                width={mediaDetails.width}
+                height={mediaDetails.height}
                 />
 
               
