@@ -17,29 +17,31 @@ export async function getStaticProps(){
     }
 }
 
-const AlbumsPage = ({albums})=> {
+const AlbumsLandingPage = ({albums})=> {
     return <Layout>
         <Container>
-        <Heading level = "1"> Alumbs</Heading>
+        <Heading level = "1"> Albums</Heading>
             <Row>
        
-        {albums.map((album,index)=>{
-            const {featuredImage, title, slug} = album;
-            const {SourceUrl, altText, mediaDetails } = featuredImage.node;
+        {albums.map((albums,index)=>{
+            const {featuredImage, title, slug} = albums.node;
+            const {sourceUrl, altText, mediaDetails } = featuredImage.node;
             return <Col key={index} xs="6" sm="4">
-                <Image
-                src={SourceUrl}
-                alt={altText}
-                width={mediaDetails.width}
-                height={mediaDetails.height}
-                />
+               <Image 
+                        
+                        src = {sourceUrl}
+                        alt = {altText}
+                        height = {mediaDetails.height}
+                        width = {mediaDetails.width}
+                            
+                    />  
 
               
             <Heading level="3">
                 {title}
             </Heading>
             <Paragraph>
-                        <Link href={`/alumbs/${slug}`}>
+                        <Link href={`/albums/${slug}`}>
                         <a>
                             Read more
                         </a>
@@ -53,4 +55,4 @@ const AlbumsPage = ({albums})=> {
 
     
 }
-export default AlbumsPage;
+export default AlbumsLandingPage;

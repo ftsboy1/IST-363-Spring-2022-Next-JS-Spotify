@@ -1,8 +1,8 @@
-import Layout from "../../component/layout" 
+import Layout from "../../component/Layout" 
 import {getAllTrackPaths, getSingleTrackData} from '../../lib/api'
 
 import Link from "next/link"
-import Heading from '../../component/heading';
+import Heading from '../../component/Heading';
 import Col from "../../component/Col";
 import Container from "../../component/Container";
 import Row from "../../component/Row";

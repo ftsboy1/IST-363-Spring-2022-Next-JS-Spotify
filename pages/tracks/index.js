@@ -1,5 +1,5 @@
-import Layout from "../../component/layout"
-import Heading from "../../component/heading"
+import Layout from "../../component/Layout"
+import Heading from "../../component/Heading"
 import {getTracks} from "../../lib/api"
 import Link from "next/link"
 

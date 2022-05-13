@@ -1,7 +1,7 @@
 const { default: Layout } = require("../../component/layout")
 import Heading from '../../component/Heading';
 import Image from "next/image"
-import {getAllAlumbsSlugs,getSingleAlbumData } from '../../lib/api'
+import {getAllAlbumSlugs,getSingleAlbumData } from '../../lib/api'
 import Row from '../../component/Row';
 import Link from 'next/link'
 import Col from "../../component/Col"
@@ -9,7 +9,7 @@ import Col from "../../component/Col"
 //waterfall
 // get a list of paths to prerender 
 export async function getStaticPaths() {
-    const paths = await getAllAlumbsSlugs();
+    const paths = await getAllAlbumSlugs();
 
     return {
         paths,
@@ -39,7 +39,7 @@ const SingleAlumbPage = ({albumData})=>{
     return <Layout>
         <Image 
                         
-                        src = {sourceUrl}
+                  src = {sourceUrl}
                         alt = {altText}
                         height = {mediaDetails.height}
                         width = {mediaDetails.width}

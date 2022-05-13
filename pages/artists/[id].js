@@ -53,7 +53,7 @@ const SingleArtistPage =( {artistData} )=>{
                 const {title ,slug,featuredImage} = album
                 const {sourceUrl, altText, mediaDetails } = featuredImage.node;
                     return <Col xs="6" sm="4" md="3">  
-                    <Link href={`/albums/${slug}`}>
+                    <Link href={'/albums'}>
                     <a>
                         <Image 
                         
