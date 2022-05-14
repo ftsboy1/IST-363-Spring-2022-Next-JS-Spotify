@@ -34,7 +34,7 @@ export async function getStaticProps({params}){
 }
 
 const SingleArtistPage =( {artistData} )=>{
-    const { title,content,featuredImage ,artistInformation} =artistData;
+    const { title, content ,featuredImage ,artistInformation} =artistData;
     const {sourceUrl, altText, mediaDetails } = featuredImage.node;
     const {artistsToAlbums} = artistInformation
     return <Layout>
@@ -48,7 +48,7 @@ const SingleArtistPage =( {artistData} )=>{
                     width = {mediaDetails.width}
                 />
                 </Col>
-                <Col xs="12" md="9">
+                <Col xs="12" md="9" justifyContent='center'>
                     <Heading level="1"> {title}</Heading>
                     <Paragraph intro>
                         {content}

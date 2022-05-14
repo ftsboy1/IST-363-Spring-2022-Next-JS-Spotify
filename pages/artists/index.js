@@ -25,7 +25,7 @@ export async function getStaticProps() {
 const ArtistslandingPage = ({artists})=>{
     return <Layout>
         <Container>
-        <Heading level="1">artists</Heading>
+        <Heading level="1">Artists</Heading>
         <Row>
         {artists.map((artists,index)=>{
             const {title, slug,featuredImage} = artists.node;

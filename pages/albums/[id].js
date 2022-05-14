@@ -1,7 +1,7 @@
 import Layout from '../../component/Layout';
 import Heading from '../../component/Heading';
 import Image from "next/image"
-import {getAllAlbumSlugs,getSingleAlbumData } from '../../lib/api'
+import { getAllAlbumSlugs,getSingleAlbumData } from '../../lib/api'
 import Row from '../../component/Row';
 import Link from 'next/link'
 import Col from "../../component/Col"
