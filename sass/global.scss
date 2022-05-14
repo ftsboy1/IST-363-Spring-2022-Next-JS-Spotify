@@ -24,27 +24,35 @@ ul,li{
 
 
 body{
-    
-    font-family: vars.$font_primary;
-    color: vars.$SUBlue;
-    min-height:100%;
-    h2{
-        color:wheat;
-        margin:0;
+    h1{
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-size: 4rem;
     }
+    h2{
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    p{
+        font-weight:400;
+    }
+    font-family: vars.$color_light-gray;
+    
+    min-height:100%;
+   
     @include mixins.breakpoint(phone){
-        background-color:vars.$SUorange;
+        //background-color:vars.$SUorange;
         font-size: 1rem;
         margin-bottom:.2rem;
     }
     @include mixins.breakpoint(tablet){
-        background-color: wheat;
+        //background-color: wheat;
         ul{font-size:1rem}
         font-size: 2rem;
         margin-bottom:1.2rem;
     }
-    @include mixins.breakpoint(laptop){background-color: red;}
-    @include mixins.breakpoint(desktop){background-color:orange;}
+    @include mixins.breakpoint(laptop){/*background-color: vars.$color_light-gray;*/}
+    @include mixins.breakpoint(desktop){/*background-color:vars.$color_light-gray;*/}
    
 }
 

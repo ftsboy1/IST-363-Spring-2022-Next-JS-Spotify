@@ -13,7 +13,7 @@ export default function Button({label,path,type}) {
             primary : type === "primary",
             secondary : type === "secondary"
         });
-return (<button className={buttonClasses} onClick={sayHello}>  
+return (<button className={buttonClasses} >  
     {path ?
         <Link href={path}>
         <a>

@@ -1,19 +1,25 @@
+@use "../sass/abstracts/vars";
+
 .btn{
-    background-color: limegreen;
-    color:white;
-    border:1px solid white;
-    padding: .5rem 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;  
+    border:0;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    font-family: Arial;
     text-transform: uppercase;
-    margin: 0.5rem;
+    border-radius: 200px;
     a{
         color: white;
+        text-decoration: none;
     }
         &.primary{
-            background-color: limegreen;
+            background-color: vars.$color_primary;
         }
         &.secondary{
-            background-color:pink;
+            background-color: white;
+            border: 1px solid limegreen;
+            color:limegreen;
+            a{
+                color:limegreen;
+            }
         }
 }

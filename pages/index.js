@@ -10,10 +10,22 @@ import Layout from '../component/Layout'
 import Container from '../component/Container'
 import Row from '../component/Row'
 import Col from '../component/Col'
+import { getAlbums } from '../lib/api'
+import Showcase from '../component/Showcase'
+import NewReleases from '../component/Newrelease'
 
 
+export async function getStaticProps(){ 
+  const albums = await getAlbums()
+  return {
+    props:{
+      albums
+    }
+  }
 
-export default function Home() {
+}
+
+export default function Home({albums}) {
   return (
     <Layout>
       <Head>
@@ -21,18 +33,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <mata name= 'description' content="something cool goes here"></mata>
       </Head>
-      <section>
-        <Container>
-          <Row>
-            <Col sm="6" md="4" lg="3">col 1 </Col>
-            <Col sm="6" md="4" lg="3">col 2 </Col>
-            <Col sm="6" md="4" lg="3">col 3 </Col>
-            <Col sm="6" md="4" lg="3">col 4 </Col>
-          </Row>
-        </Container>
-      </section>
 
-        <TracksByGenre/>
+      
+      <Showcase/>
+      <NewReleases items={albums}/>
+
+
+      {/*TracksByGenre items={tracks}/> */}
 
 
 

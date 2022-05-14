@@ -3,6 +3,7 @@ import Layout from "../../component/Layout"
 import Heading from "../../component/Heading"
 import Row from "../../component/Row"
 import Col from "../../component/Col"
+import Container from "../../component/Container"
 import Link from 'next/link'
 import Paragraph from "../../component/Paragraph"
 import Image from "next/image"
@@ -23,12 +24,13 @@ export async function getStaticProps() {
 
 const ArtistslandingPage = ({artists})=>{
     return <Layout>
+        <Container>
         <Heading level="1">artists</Heading>
         <Row>
         {artists.map((artists,index)=>{
             const {title, slug,featuredImage} = artists.node;
             const {sourceUrl, altText, mediaDetails} = featuredImage.node;
-                return <Col key={index} xs="6" sm="6">
+                return <Col key={index} xs="6" sm="4" marginBottom="2">
                     <Image
                     src={sourceUrl}
                     alt={altText}
@@ -49,6 +51,7 @@ const ArtistslandingPage = ({artists})=>{
             })
         }
         </Row>
+        </Container>
         </Layout>
 }
 export default  ArtistslandingPage;

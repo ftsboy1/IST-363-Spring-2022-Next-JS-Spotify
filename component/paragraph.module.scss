@@ -1,10 +1,10 @@
+@use "../sass/abstracts/mixins";
 .paragraph{
+        @include mixins.marginBottom();
     font:arial;
-    font-weight: bold;
-    color: pink;
-    font-size: 2rem;
+    color: black;
+    font-size: 1rem;
     &.intro{
-        color: lightblue;
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }

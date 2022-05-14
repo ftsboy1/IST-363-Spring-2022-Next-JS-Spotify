@@ -6,6 +6,8 @@ import Link from 'next/link'
 import Paragraph from '../../component/Paragraph'
 import Layout from "../../component/Layout";
 import {getAllArtistSlugs,getSingleArtistData} from "../../lib/api"
+import Container from "../../component/Container";
+import Section from "../../component/Section";
 
 
 
@@ -32,21 +34,31 @@ export async function getStaticProps({params}){
 }
 
 const SingleArtistPage =( {artistData} )=>{
-    const { title,featuredImage ,artistInformation} =artistData;
+    const { title,content,featuredImage ,artistInformation} =artistData;
     const {sourceUrl, altText, mediaDetails } = featuredImage.node;
     const {artistsToAlbums} = artistInformation
     return <Layout>
-        <Image 
-        src = {sourceUrl}
-        alt = {altText}
-        height = {mediaDetails.height}
-        width = {mediaDetails.width}
-            />
-        <Heading level="1"> {title}</Heading>
+        <Container>
+            <Row>
+                <Col xs="12" md="3" >
+                <Image 
+                    src = {sourceUrl}
+                    alt = {altText}
+                    height = {mediaDetails.height}
+                    width = {mediaDetails.width}
+                />
+                </Col>
+                <Col xs="12" md="9">
+                    <Heading level="1"> {title}</Heading>
+                    <Paragraph intro>
+                        {content}
+                    </Paragraph>
+                </Col>
+            </Row>
         {artistsToAlbums && 
-        <section>
+        <Section>
             <Heading level="2">
-                alumb
+                Alumb
             </Heading>
             <Row>
             {artistsToAlbums.map((album,index)=>{
@@ -71,16 +83,18 @@ const SingleArtistPage =( {artistData} )=>{
                     </Col>
             })}
             </Row>
-        </section>
+        </Section>
 }
  <Paragraph >
      <Link href={`/artists`}>
      <a>
-         back to artists
+         Back to artists
      </a>
      </Link>
  </Paragraph>
+ </Container>
     </Layout>
+    
 }
 export default SingleArtistPage ;
 
